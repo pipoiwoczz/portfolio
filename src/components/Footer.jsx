@@ -16,7 +16,7 @@ const Footer = () => {
                 <span className="text-white font-bold text-xl">L</span>
               </div>
               <div>
-                <h2 className="text-xl font-bold">Lé Ngọc Anh Khoa</h2>
+                <h2 className="text-xl font-bold">Lê Ngọc Anh Khoa</h2>
                 <p className="text-blue-400">AI & Machine Learning Engineer</p>
               </div>
             </div>
@@ -198,7 +198,7 @@ const Footer = () => {
         
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-500 text-sm">
-            &copy; {currentYear} Lé Ngọc Anh Khoa. All rights reserved.
+            &copy; {currentYear} Lê Ngọc Anh Khoa. All rights reserved.
           </p>
         </div>
       </div>
