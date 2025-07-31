@@ -4,18 +4,15 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
-import Experience from './components/Experience.jsx';
+import Education from './components/Education';
 import Contact from './components/Contact';
-// import Footer from './components/Footer';
+import Footer from './components/Footer';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
+  const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
-    // Simulate loading
-    setTimeout(() => setIsLoading(false), 1500);
-    
     // Check for saved dark mode preference
     const savedDarkMode = localStorage.getItem('darkMode') === 'true';
     setDarkMode(savedDarkMode);
@@ -24,40 +21,44 @@ function App() {
     if (savedDarkMode) {
       document.body.classList.add('dark-mode');
     }
+
+    // Section observer for active nav highlighting
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    // Observe all sections
+    document.querySelectorAll('section').forEach(section => {
+      observer.observe(section);
+    });
+
+    return () => observer.disconnect();
   }, []);
 
   const toggleDarkMode = () => {
     const newMode = !darkMode;
     setDarkMode(newMode);
     localStorage.setItem('darkMode', newMode);
-    
-    if (newMode) {
-      document.body.classList.add('dark-mode');
-    } else {
-      document.body.classList.remove('dark-mode');
-    }
+    document.body.classList.toggle('dark-mode', newMode);
   };
-
-  if (isLoading) {
-    return (
-      <div className="flex items-center justify-center h-screen bg-white dark:bg-gray-900">
-        <div className="animate-pulse">
-          <div className="w-16 h-16 mx-auto bg-blue-500 rounded-full"></div>
-          <p className="mt-4 text-center text-gray-600 dark:text-gray-300">Loading Portfolio...</p>
-        </div>
-      </div>
-    );
-  }
 
   return (
     <div className="font-sans bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 transition-colors duration-300">
-      <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+      <Navbar 
+        darkMode={darkMode} 
+        toggleDarkMode={toggleDarkMode} 
+        activeSection={activeSection}
+      />
       <Hero />
       <Skills />
       <Projects />
-      {/* <Experience /> */}
-      {/* <Contact /> */}
-      {/* <Footer /> */}
+      <Education />
+      <Contact />
+      <Footer />
     </div>
   );
 }

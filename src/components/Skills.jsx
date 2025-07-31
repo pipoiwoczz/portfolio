@@ -1,27 +1,27 @@
 // src/components/Skills.jsx
 import React from 'react';
-import { FaReact, FaNodeJs, FaFigma, FaDatabase, FaCode } from 'react-icons/fa';
-import { SiJavascript, SiTypescript, SiTailwindcss, SiNextdotjs } from 'react-icons/si';
+import { FaPython, FaCode, FaDocker } from 'react-icons/fa';
+import { SiPytorch, SiTensorflow, SiNumpy, SiCplusplus } from 'react-icons/si';
 
 const Skills = () => {
   const skills = [
-    { icon: <FaReact size={40} />, name: 'React', level: 95 },
-    { icon: <SiJavascript size={40} />, name: 'JavaScript', level: 90 },
-    { icon: <SiTypescript size={40} />, name: 'TypeScript', level: 85 },
-    { icon: <SiTailwindcss size={40} />, name: 'Tailwind CSS', level: 90 },
-    { icon: <FaNodeJs size={40} />, name: 'Node.js', level: 80 },
-    { icon: <SiNextdotjs size={40} />, name: 'Next.js', level: 85 },
-    { icon: <FaFigma size={40} />, name: 'UI/UX Design', level: 75 },
-    { icon: <FaDatabase size={40} />, name: 'Database', level: 70 },
+    { icon: <FaPython size={40} />, name: 'Python', level: 95 },
+    { icon: <SiCplusplus size={40} />, name: 'C++', level: 85 },
+    { icon: <SiPytorch size={40} />, name: 'PyTorch', level: 90 },
+    { icon: <SiTensorflow size={40} />, name: 'TensorFlow', level: 80 },
+    { icon: <SiNumpy size={40} />, name: 'NumPy', level: 90 },
+    { icon: <FaDocker size={40} />, name: 'Docker', level: 75 },
+    { icon: <FaCode size={40} />, name: 'Z3 Solver', level: 80 },
+    { icon: <FaCode size={40} />, name: 'Git', level: 85 },
   ];
 
   return (
-    <section id="skills" className="py-20 bg-gray-50 dark:bg-gray-800">
+    <section id="skills" className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white">My Skills</h2>
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Technical Skills</h2>
           <p className="mt-4 text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Technologies and tools I specialize in
+            Technologies matching my CV expertise
           </p>
         </div>
         
@@ -59,28 +59,27 @@ const Skills = () => {
             </div>
             <div className="md:w-2/3 md:pl-10">
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-                My Development Approach
+                Technical Approach
               </h3>
               <p className="text-gray-600 dark:text-gray-300 mb-4">
-                I focus on creating clean, efficient code that delivers exceptional user experiences. 
-                My development process emphasizes:
+                My development approach focuses on implementing theoretical concepts into practical solutions:
               </p>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <li className="flex items-start">
                   <span className="text-blue-600 dark:text-blue-400 mr-2">✓</span>
-                  <span>Responsive & mobile-first design</span>
+                  <span>Building from scratch without external libraries</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-blue-600 dark:text-blue-400 mr-2">✓</span>
-                  <span>Performance optimization</span>
+                  <span>Implementing efficient algorithms</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-blue-600 dark:text-blue-400 mr-2">✓</span>
-                  <span>Accessibility compliance</span>
+                  <span>Visualizing complex processes</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-blue-600 dark:text-blue-400 mr-2">✓</span>
-                  <span>Modern JavaScript practices</span>
+                  <span>Optimizing for performance</span>
                 </li>
               </ul>
             </div>
