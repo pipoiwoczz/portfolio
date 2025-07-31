@@ -9,7 +9,8 @@ const Projects = () => {
       title: 'Multimodal Fashion Search Engine',
       description: 'End-to-end multimodal search engine for fashion items using computer vision and NLP',
       tags: ['PyTorch', 'CLIP', 'FAISS', 'BLIP', 'Gradio'],
-      github: 'https://github.com/pipoiwoczz/Fashion-Search-Engine',
+      github: 'https://github.com/pipoiwoczz/Image-Query',
+      image: 'assets/image_query.png',
       features: [
         'Implemented CLIP embeddings + FAISS indexing achieving <0.5s query latency',
         'Integrated BLIP model for automatic image captioning',
@@ -22,7 +23,8 @@ const Projects = () => {
       title: 'Simple Neural Network for Handwritten Digit Classification',
       description: 'Digit classification model built from scratch using NumPy',
       tags: ['NumPy', 'Matplotlib', 'Machine Learning'],
-      github: 'https://github.com/pipoiwoczz/Simple-Neural-Network',
+      github: 'https://github.com/pipoiwoczz/Simple-Neural-Network-For-Number-Classification',
+      image: 'assets/neural_network.png',
       features: [
         'Achieved 98% test accuracy on MNIST dataset',
         'Implemented backpropagation without external ML libraries',
@@ -34,7 +36,8 @@ const Projects = () => {
       title: 'Wumpus World Agent',
       description: 'AI logic-based agent for hazardous grid-world navigation',
       tags: ['Z3 Solver', 'Propositional Logic', 'Tkinter'],
-      github: 'https://github.com/pipoiwoczz/Wumpus',
+      github: 'https://github.com/pipoiwoczz/Wumpus-World-Agent',
+      image: './assets/wumpus.png',
       features: [
         'Used Z3 solver for dynamic inference',
         'Integrated percept-based frontier exploration',
@@ -47,6 +50,7 @@ const Projects = () => {
       description: 'Q-learning agent mastering Tic-Tac-Toe through self-play',
       tags: ['Reinforcement Learning', 'Q-learning', 'Tkinter'],
       github: 'https://github.com/pipoiwoczz/Tic-tac-toe-RL-Agent',
+      image: '/assets/ttt.png',
       features: [
         'Implemented epsilon-greedy exploration and state hashing',
         'Designed game environment and reward function from scratch',
@@ -59,6 +63,7 @@ const Projects = () => {
       description: 'Terminal-based obstacle-dodging game engine in C++',
       tags: ['C++', 'OOP', 'Windows API', 'Multithreading'],
       github: 'https://github.com/pipoiwoczz/Crossing_Game_OOP',
+      image: 'assets/crossing_game.png',
       features: [
         'Built 20+ OOP classes for game components',
         'Integrated multi-threaded engine loop',
@@ -85,7 +90,17 @@ const Projects = () => {
             >
               <div className="h-48 bg-gradient-to-r from-blue-500 to-purple-600 relative">
                 <div className="bg-gray-200 border-2 border-dashed w-full h-full flex items-center justify-center text-gray-500 dark:text-gray-400">
-                  Project Preview
+                  {project.image ? (
+                    <img
+                      src={project.image}
+                      alt={`${project.title} preview`}
+                      className="object-cover w-full h-full transition-transform duration-300 hover:scale-105"
+                    />
+                  ) : (
+                    <div className="bg-gray-200 border-2 border-dashed w-full h-full flex items-center justify-center text-gray-500 dark:text-gray-400">
+                      Project Preview
+                    </div>
+                  )}
                 </div>
                 <div className="absolute top-4 right-4 flex space-x-2">
                   <a 
@@ -132,8 +147,21 @@ const Projects = () => {
               </div>
             </div>
           ))}
+
         </div>
       </div>
+
+      
+          <div className="text-center mt-8">
+            <a
+              href="https://github.com/pipoiwoczz?tab=repositories"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow hover:bg-blue-700 transition duration-300"
+            >
+              Watch More on GitHub
+            </a>
+          </div>
     </section>
   );
 };

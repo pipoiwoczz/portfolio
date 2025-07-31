@@ -10,8 +10,6 @@ const Education = () => {
     "Data Structures & Algorithms",
     "Object-Oriented Programming",
     "Advanced Mathematics",
-    "Computer Vision Fundamentals",
-    "Reinforcement Learning Principles"
   ];
 
   return (

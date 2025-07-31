@@ -35,7 +35,7 @@ const Footer = () => {
                 <FaGithub size={20} />
               </a>
               <a 
-                href="https://linkedin.com/in/le-ngoc-anh-khoa" 
+                href="https://www.linkedin.com/in/anh-khoa-l%C3%AA-ng%E1%BB%8Dc-836595354/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="bg-gray-800 hover:bg-blue-600 p-3 rounded-full text-white transition-colors"
@@ -111,7 +111,7 @@ const Footer = () => {
             <ul className="space-y-4">
               <li>
                 <a 
-                  href="https://github.com/pipoiwoczz/Fashion-Search-Engine" 
+                  href="https://github.com/pipoiwoczz/Image-Query" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-blue-400 transition-colors flex"
@@ -185,7 +185,7 @@ const Footer = () => {
             <div className="mt-8 bg-gray-800 rounded-lg p-4">
               <h4 className="font-medium mb-3">Download My CV</h4>
               <a 
-                href="/CV.pdf" 
+                href="/assets/CV.pdf" 
                 download="Le_Ngoc_Anh_Khoa_CV.pdf"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors flex items-center justify-center"
               >
@@ -199,9 +199,6 @@ const Footer = () => {
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-500 text-sm">
             &copy; {currentYear} Lé Ngọc Anh Khoa. All rights reserved.
-          </p>
-          <p className="text-gray-500 text-sm mt-2 md:mt-0">
-            Designed with ❤️ for AI innovation
           </p>
         </div>
       </div>

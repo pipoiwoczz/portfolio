@@ -9,7 +9,7 @@ const Hero = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="text-center md:text-left order-2 md:order-1">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-              Hi, I'm <span className="text-blue-600 dark:text-blue-400">Lé Ngọc Anh Khoa</span>
+              Hi, I'm <span className="text-blue-600 dark:text-blue-400">Lê Ngọc Anh Khoa</span>
             </h1>
             <h2 className="text-2xl md:text-3xl mt-4 text-gray-600 dark:text-gray-300">
               AI & Machine Learning Engineer
@@ -26,7 +26,7 @@ const Hero = () => {
                 View Projects
               </a>
               <a 
-                href="/CV.pdf" 
+                href="assets/CV.pdf" 
                 download="Le_Ngoc_Anh_Khoa_CV.pdf"
                 className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 dark:hover:bg-gray-800 px-6 py-3 rounded-full font-medium transition-colors flex items-center"
               >
@@ -38,7 +38,7 @@ const Hero = () => {
               <a href="https://github.com/pipoiwoczz" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors" aria-label="GitHub">
                 <FaGithub size={24} />
               </a>
-              <a href="https://linkedin.com/in/le-ngoc-anh-khoa" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/in/anh-khoa-l%C3%AA-ng%E1%BB%8Dc-836595354/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors" aria-label="LinkedIn">
                 <FaLinkedin size={24} />
               </a>
               <a href="mailto:lengocanhkhoa2919@gmail.com" className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors" aria-label="Email">

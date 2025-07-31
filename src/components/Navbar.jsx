@@ -54,7 +54,7 @@ const Navbar = ({ darkMode, toggleDarkMode, activeSection }) => {
               <div className="bg-blue-100 dark:bg-blue-900/30 h-10 w-10 rounded-full flex items-center justify-center mr-3">
                 <span className="text-blue-600 dark:text-blue-400 font-bold">L</span>
               </div>
-              <span>Lé Ngọc Anh Khoa</span>
+              <span>Lê Ngọc Anh Khoa</span>
             </a>
           </div>
           
