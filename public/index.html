@@ -1,10 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-    <!-- Add this inside head tag -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- ✅ PREVENT FOUC: Apply .dark class early based on localStorage -->
+    <script>
+      if (localStorage.getItem('darkMode') === 'true') {
+        document.documentElement.classList.add('dark');
+      }
+    </script>
+
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body.dark-mode {
+        background-color: #1a202c;
+        color: #e2e8f0;
+      }
+    </style>
+
     <script>
       tailwind.config = {
+        darkMode: 'class',
         theme: {
           extend: {
             colors: {
@@ -16,29 +34,18 @@
         }
       }
     </script>
-    <style>
-      body.dark-mode {
-        background-color: #1a202c;
-        color: #e2e8f0;
-      }
-    </style>
+
+    <meta name="description" content="Lê Ngọc Anh Khoa - AI Engineering Portfolio | Machine Learning | Reinforcement Learning | Computer Vision" />
+    <meta name="keywords" content="AI engineer, machine learning, reinforcement learning, PyTorch, TensorFlow, internship, computer vision" />
+
+    <!-- Optional: Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Lé Ngọc Anh Khoa - AI Engineering Portfolio | Machine Learning | Reinforcement Learning | Computer Vision">
-    <meta name="keywords" content="AI engineer, machine learning, reinforcement learning, PyTorch, TensorFlow, internship, computer vision">
+    
+    <title>Lê Ngọc Anh Khoa | Portfolio</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
 </html>

@@ -13,16 +13,17 @@ function App() {
   const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
-    // Check for saved dark mode preference
     const savedDarkMode = localStorage.getItem('darkMode') === 'true';
     setDarkMode(savedDarkMode);
-    
-    // Apply dark mode class to body
+
+    // ✅ Apply/remove Tailwind 'dark' class on <html>, NOT <body>
     if (savedDarkMode) {
-      document.body.classList.add('dark-mode');
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
     }
 
-    // Section observer for active nav highlighting
+    // Active section tracking
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -31,11 +32,7 @@ function App() {
       });
     }, { threshold: 0.5 });
 
-    // Observe all sections
-    document.querySelectorAll('section').forEach(section => {
-      observer.observe(section);
-    });
-
+    document.querySelectorAll('section').forEach(section => observer.observe(section));
     return () => observer.disconnect();
   }, []);
 
@@ -43,7 +40,9 @@ function App() {
     const newMode = !darkMode;
     setDarkMode(newMode);
     localStorage.setItem('darkMode', newMode);
-    document.body.classList.toggle('dark-mode', newMode);
+
+    // ✅ Toggle 'dark' class on <html>
+    document.documentElement.classList.toggle('dark', newMode);
   };
 
   return (
