@@ -83,13 +83,6 @@ const Navbar = ({ darkMode, toggleDarkMode, activeSection }) => {
               >
                 {darkMode ? <FaSun size={20} /> : <FaMoon size={20} />}
               </button>
-              <a 
-                href="#contact" 
-                className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-lg font-medium transition-colors shadow-lg hover:shadow-blue-500/20 flex items-center"
-              >
-                <FaEnvelope className="mr-2" />
-                Contact
-              </a>
             </div>
           </div>
           
@@ -132,15 +125,6 @@ const Navbar = ({ darkMode, toggleDarkMode, activeSection }) => {
                 {link.name}
               </a>
             ))}
-            
-            <a 
-              href="#contact" 
-              className="flex items-center justify-center bg-blue-600 text-white px-3 py-3 rounded-lg text-center font-medium mt-2"
-              onClick={() => setIsOpen(false)}
-            >
-              <FaEnvelope className="mr-2" />
-              Contact Me
-            </a>
           </div>
         </div>
       )}

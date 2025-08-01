@@ -7,6 +7,7 @@ const Education = () => {
     "Introduction to Machine Learning",
     "Algorithm Design and Analysis",
     "Introduction to Artificial Intelligence",
+    "Introduction to Big Data",
     "Data Structures & Algorithms",
     "Object-Oriented Programming",
     "Advanced Mathematics",
@@ -38,7 +39,7 @@ const Education = () => {
                   <FaChartLine className="mr-3" />
                   <div>
                     <p className="text-sm text-blue-200">Current GPA</p>
-                    <p className="text-3xl font-bold">8.34</p>
+                    <p className="text-3xl font-bold">8.23</p>
                   </div>
                 </div>
                 
