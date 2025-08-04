@@ -6,7 +6,7 @@ import {
 } from 'react-icons/fa';
 import { 
   SiPytorch, SiTensorflow, SiNumpy, SiCplusplus, 
-  SiPandas, SiScikitlearn, SiOpencv, SiJupyter 
+  SiPandas, SiScikitlearn, SiOpencv, SiJupyter , SiJavascript
 } from 'react-icons/si';
 import { motion } from 'framer-motion';
 
@@ -16,6 +16,7 @@ const Skills = () => {
   const languages = [
     { icon: <FaPython size={40} />, name: 'Python', level: 95 },
     { icon: <SiCplusplus size={40} />, name: 'C++', level: 85 },
+    { icon: <SiJavascript size= {40}/>, name: 'Javascript', level: 70},
   ];
   
   const frameworks = [
