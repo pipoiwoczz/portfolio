@@ -58,7 +58,10 @@ const Hero = () => {
             <div className="relative">
               <div className="bg-gradient-to-br from-blue-500 to-purple-600 dark:from-blue-700 dark:to-purple-800 w-64 h-64 md:w-80 md:h-80 mx-auto rounded-2xl overflow-hidden border-4 border-white dark:border-gray-800 shadow-xl transform rotate-3">
                 <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-full flex items-center justify-center text-gray-500 dark:text-gray-400">
-                  Profile Image
+                  <img
+                    src="./assets/myself.png"
+                    alt={`IMAGE`}
+                  />
                 </div>
               </div>
               
